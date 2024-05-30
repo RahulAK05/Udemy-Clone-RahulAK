@@ -43,7 +43,10 @@ body {
   gap: 10px;
   align-items: center;
 }
-/* my learning-pipup*/
+.navbar__s4 {
+  display: none;
+}
+/* my learning-popup*/
 .my-learning {
   position: relative;
   cursor: pointer;
@@ -114,17 +117,24 @@ body {
   padding: 10px;
 }
 .course-card {
-  width: 300px;
+  flex-grow: 1;
+  flex-basis: 20%;
+  margin: 10px;
 }
 .course-card img {
   height: 50%;
   width: 100%;
+  cursor: pointer;
 }
 .recommended__container {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
   flex-wrap: wrap;
+}
+.course-card:hover {
+  transition: 1s;
+  transform: scale(1.1);
 }
 .Topics {
   padding: 10px;
@@ -140,6 +150,13 @@ body {
   padding: 10px;
   flex-grow: 1;
   flex-basis: 25%;
+  cursor: pointer;
+}
+.topics__container p:hover {
+  transition: 0.5s;
+  background-color: black;
+  color: white;
+  border: solid black 1px;
 }
 .popular {
   padding: 10px;
@@ -158,6 +175,10 @@ body {
 .footer__one {
   display: flex;
   margin-bottom: 50px;
+  cursor: pointer;
+}
+.footer__one p:hover {
+  color: gray;
 }
 .footer__one__s1 {
   padding: 10px;
@@ -176,4 +197,42 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* media queries */
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .course-card {
+    flex-basis: 40%;
+  }
+  .categories {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+  }
+  .navbar__s3 {
+    display: none;
+  }
+  .navbar__s2 input {
+    font-size: 10px;
+  }
+  .navbar__s2 {
+    border: solid black 1px;
+    padding: 10px;
+    border-radius: 15px;
+    width: 30%;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar__s4 {
+    display: block;
+  }
 }
